@@ -36,6 +36,14 @@ Un increíble simulador de batallas por turnos desarrollado en Node.js con una i
 
 ---
 
+## 🎥 **Video Explicativo del Proyecto**
+
+¡Mira nuestro video explicativo para entender mejor cómo funciona el simulador!
+
+[![Video Explicativo](https://img.shields.io/badge/Ver%20Video-YouTube-red)](https://drive.google.com/file/d/1kAUJVx-MWSPD_W_4FVMYIqr0_cQyAoi2/view?usp=drive_link)
+
+---
+
 ## 🚀 **Instalación Súper Fácil**
 
 ### **Prerequisitos**
