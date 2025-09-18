@@ -1,124 +1,233 @@
-# Taller - Simulador de Batallas RPG por Consola (Node.js)
+# 🎮 RPG BATTLE SIMULATOR
+
+## ⚔️ **Simulador de Batallas RPG Épico y Súper Sencillo**
+
+Un increíble simulador de batallas por turnos desarrollado en Node.js con una interfaz de consola súper genial. Incluye barras de progreso, colores épicos, efectos visuales increíbles y sistema de guardado local en JSON.
 
 ---
 
-### Objetivo General
+## 🌟 **Características Principales**
 
-Desarrollar una **aplicación de consola interactiva** que simule batallas entre personajes con distintas clases (guerrero, mago, arquero, etc.), aplicando programación orientada a objetos, principios SOLID, diseño limpio, trabajo en equipo y publicación en GitHub.
+### ✨ **Visual y UX Increíbles**
+- 🎨 **Colores épicos** con la librería Chalk
+- 📊 **Barras de vida y maná** en tiempo real con cli-progress
+- 🎲 **Spinners de carga** elegantes con Ora
+- 🎪 **Títulos ASCII** geniales con Figlet
+- 💫 **Animaciones y efectos** visuales en consola
 
----
+### 🧙‍♂️ **Sistema de Personajes**
+- **3 Clases únicas**:
+  - 💪 **Guerrero**: Tank con alta vida y defensa
+  - 🔮 **Mago**: Atacante mágico con curación
+  - 🏹 **Arquero**: Rápido con probabilidad de esquivar
 
-### Requisitos Generales
+### ⚔️ **Sistema de Batallas**
+- 🎯 **Batallas por turnos** súper dinámicas
+- 🤖 **IA inteligente** para enemigos
+- 👥 **Modo PvP** (Jugador vs Jugador)
+- ✨ **Habilidades especiales** únicas por clase
+- 🎲 **Sistema de críticos y esquivar**
 
-- Lenguaje: **JavaScript con Node.js**
-- Librerías permitidas: cualquier paquete `npm` útil (ej. `inquirer`, `chalk`, `uuid`, etc.)
-- Aplicación con **interfaz por consola (menú funcional)**.
-- Aplicar **los 5 principios SOLID**.
-- Uso de **Programación Orientada a Objetos**:
-    - Herencia
-    - Polimorfismo
-    - Encapsulamiento
-    - Relaciones entre clases
-
----
-
-### Funcionalidades mínimas que debe tener la app
-
-### Gestión de personajes
-
-- Crear personajes de diferentes clases (ej. Guerrero, Mago, Arquero).
-- Cada clase debe tener atributos y habilidades distintas.
-- Los personajes pueden subir de nivel y mejorar sus estadísticas.
-
-### Sistema de batallas
-
-- Simular batallas por turnos entre personajes.
-- Aplicar habilidades especiales con efectos distintos.
-- Mostrar los resultados por consola.
-
-### Inventario y objetos
-
-- Manejar objetos de batalla: armas, pociones, armaduras.
-- Los objetos deben modificar el comportamiento o atributos del personaje.
-- Deben poder añadirse, usarse y eliminarse del inventario.
-
-### Enemigos controlados por IA
-
-- Crear enemigos aleatorios.
-- El sistema debe controlar su ataque en cada turno.
-
-### Guardar y cargar progreso
-
-- Opcional: permitir guardar personajes en archivos JSON o base de datos local (`lowdb`, `fs`, etc.).
-
-### Menú funcional por consola
-
-- Usar `inquirer` para presentar opciones y capturar decisiones del usuario:
-    - Crear personaje
-    - Ver personajes
-    - Iniciar batalla
-    - Salir
+### 💾 **Persistencia de Datos**
+- 📁 **Guardado automático** en JSON local
+- 📊 **Estadísticas del juego** completas
+- 🔄 **Sistema de backup** integrado
+- 📈 **Tracking de progreso** y experiencia
 
 ---
 
-### Aspectos técnicos obligatorios
+## 🚀 **Instalación Súper Fácil**
 
-### Aplicar los 5 principios SOLID
+### **Prerequisitos**
+- Node.js v16 o superior
+- npm o yarn
 
-- **SRP**: cada clase debe tener una única responsabilidad (ej. `Batalla`, `GestorInventario`, `Notificador`, etc.).
-- **OCP**: permitir añadir nuevas clases de personaje sin modificar las existentes.
-- **LSP**: todos los personajes deben poder usarse como instancias de una clase base `Personaje`.
-- **ISP**: separar interfaces como `IAtaque`, `ICurable`, `IUsaMagia` para no forzar métodos innecesarios.
-- **DIP**: clases como `GestorBatalla` deben depender de abstracciones (`IAtaque`, `INotificador`) y no de implementaciones concretas.
+### **Pasos de Instalación**
 
-### Programación orientada a objetos
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/Deamacevedo/simulador-batallas-rpg.git
+cd simulador-batallas-rpg
 
-- Usar herencia (`extends`), métodos sobrescritos, encapsulamiento (`#propiedades`, métodos públicos), y relaciones (composición, agregación).
+# 2. Instala las dependencias
+npm install
 
-### Diagrama de clases
-
-- Deben entregar el diseño en un **diagrama UML** donde se visualicen clases, atributos, métodos y relaciones.
-
-### Organización del proyecto
-
-- Código dividido en carpetas, por ejemplo:
-    - `src/` (código fuente)
-    - `services/` (clases de lógica)
-    - `models/` (entidades)
-    - `utils/` (funciones auxiliares)
-    - `data/` (archivos JSON si se guarda el juego)
-- Código documentado y limpio.
+# 3. ¡Ejecuta el juego!
+npm start
+```
 
 ---
 
-### Entregables
+## 🎮 **Cómo Jugar**
 
-1. **Repositorio GitHub** con el código completo y documentado.
-2. **Diagrama de clases UML** (PDF o imagen) incluido en el README.
-3. **Video explicativo** dividido en 3 partes:
-    - Parte 1: Explicación del diagrama de clases
-    - Parte 2: Organización del código y aplicación de SOLID
-    - Parte 3: Demostración de la aplicación en ejecución
-    - Todos los integrantes deben aparecer y participar.
+### **Menú Principal**
+1. **⚔️ Crear Nuevo Personaje** - Crea tu héroe épico
+2. **📁 Cargar Personaje** - Continúa tu aventura
+3. **🏟️ Batalla vs IA** - Enfréntate a enemigos aleatorios
+4. **👥 Batalla PvP** - Lucha contra tus otros personajes
+5. **📊 Ver Estadísticas** - Revisa tu progreso
 
----
+### **Creación de Personaje**
+1. Escribe el nombre de tu héroe
+2. Elige una clase (Guerrero, Mago, Arquero)
+3. ¡Listo! Tu personaje se guarda automáticamente
 
-### Reglas de trabajo en equipo
-
-- Grupos de **máximo 3 estudiantes**.
-- Deben mostrar en el video que **todos participaron activamente**.
-- La participación será evaluada individual y grupalmente.
-
----
-
-### Sugerencias de librerías útiles
-
-- [`inquirer`](https://www.npmjs.com/package/inquirer): para menús de consola
-- [`chalk`](https://www.npmjs.com/package/chalk): para dar color a los textos
-- [`uuid`](https://www.npmjs.com/package/uuid): para generar IDs únicos
+### **Sistema de Combate**
+- **Ataque Básico**: Daño normal, sin costo de maná
+- **Ataque Especial**: Más daño, pero consume maná
+- **Curación** (solo Mago): Restaura vida gastando maná
 
 ---
 
-## Entrega
+## 🏗️ **Arquitectura del Proyecto (SOLID)**
 
-**Plazo máximo: Jueves** 18 de septiembre de 2025 a las 11:59 p.m.
+### **Estructura de Carpetas**
+```
+src/
+├── index.js                 # 🚀 Punto de entrada
+├── models/                  # 🎭 Clases de personajes
+│   ├── Character.js         #   └─ Clase base
+│   ├── Warrior.js          #   └─ Guerrero
+│   ├── Mage.js             #   └─ Mago
+│   └── Archer.js           #   └─ Arquero
+├── services/               # ⚙️ Lógica de negocio
+│   ├── GameService.js      #   └─ Coordinador principal
+│   ├── BattleService.js    #   └─ Sistema de batallas
+│   └── SaveService.js      #   └─ Persistencia de datos
+├── utils/                  # 🛠️ Utilidades
+│   ├── Display.js          #   └─ Efectos visuales
+│   └── constants.js        #   └─ Configuración
+└── data/                   # 💾 Datos guardados
+    └── saved-characters.json
+```
+
+### **Principios SOLID Aplicados**
+
+#### **🎯 SRP (Single Responsibility Principle)**
+- **Character**: Solo maneja propiedades básicas del personaje
+- **BattleService**: Solo maneja lógica de batallas
+- **SaveService**: Solo maneja persistencia de datos
+- **Display**: Solo maneja visualización y efectos
+
+#### **🔓 OCP (Open/Closed Principle)**
+- Nuevas clases de personajes se pueden agregar sin modificar código existente
+- Sistema de habilidades extensible
+
+#### **🔄 LSP (Liskov Substitution Principle)**
+- Todas las clases (Warrior, Mage, Archer) pueden usarse como Character
+- Polimorfismo perfecto en habilidades especiales
+
+#### **🧩 ISP (Interface Segregation Principle)**
+- Métodos específicos por clase (healSpell solo en Mage)
+- Interfaces limpias y específicas
+
+#### **⬆️ DIP (Dependency Inversion Principle)**
+- GameService depende de abstracciones, no implementaciones concretas
+- Fácil intercambio de componentes
+
+---
+
+## 🛠️ **Tecnologías Utilizadas**
+
+### **Librerías Principales**
+- **🎨 chalk** - Colores épicos en consola
+- **❓ inquirer** - Menús interactivos súper intuitivos
+- **📊 cli-progress** - Barras de progreso geniales
+- **⭕ ora** - Spinners de carga elegantes
+- **🎪 figlet** - Texto ASCII épico
+- **💾 lowdb** - Base de datos JSON súper simple
+- **🆔 uuid** - IDs únicos para personajes
+
+### **Características Técnicas**
+- **ES6 Modules** - Código moderno y limpio
+- **Async/Await** - Manejo asíncrono elegante
+- **Error Handling** - Manejo robusto de errores
+- **JSON Storage** - Persistencia local sencilla
+
+---
+
+## 📊 **Diagrama de Clases UML**
+
+![Diagrama de Clases UML](diagramaUML/image.png)
+
+---
+
+## 🎯 **Características de las Clases**
+
+### 💪 **Guerrero**
+- **Ventajas**: Alta vida y defensa, recibe 10% menos daño
+- **Habilidad**: Golpe Devastador (180% daño, 15 maná)
+- **Estilo**: Tank perfecto para combate prolongado
+
+### 🔮 **Mago**
+- **Ventajas**: Alto maná, regeneración +5 por turno
+- **Habilidades**: 
+  - Bola de Fuego (250% daño, 20 maná)
+  - Curación (40% vida, 25 maná)
+- **Estilo**: Versatilidad máxima entre daño y soporte
+
+### 🏹 **Arquero**
+- **Ventajas**: Alta velocidad, 20% probabilidad de esquivar
+- **Habilidades**:
+  - Flecha Múltiple (3 flechas, 18 maná)
+  - Disparo Certero (160% crítico, 12 maná)
+- **Estilo**: Hit-and-run con alta movilidad
+
+---
+
+## 📈 **Sistema de Progresión**
+
+### **Experiencia y Niveles**
+- **EXP por victoria**: 25 × nivel enemigo + bonus aleatorio
+- **Subida de nivel**: +20 vida, +5 ataque, +3 defensa, +2 velocidad, +10 maná
+- **Nivel máximo**: 50 (configurable)
+
+### **Estadísticas Guardadas**
+- Batallas ganadas/perdidas
+- Experiencia total ganada
+- Ratio de victoria
+- Personajes por clase
+- Nivel más alto alcanzado
+
+---
+
+## 🎮 **Capturas de Pantalla**
+
+```
+🎮 RPG BATTLE SIMULATOR 🎮
+⚔️  SIMULADOR DE BATALLAS ÉPICO  ⚔️
+
+🎮 ¿Qué deseas hacer?
+❯ ⚔️  Crear Nuevo Personaje
+  📁 Cargar Personaje Guardado
+  🏟️  Batalla vs IA
+  👥 Batalla PvP
+  📊 Ver Estadísticas
+  ❌ Salir
+
+═══════════════════════════════════════════════════════
+                    TURNO 1
+═══════════════════════════════════════════════════════
+
+❤️  Vida |████████████████████| 100% | 130/130 HP
+🔵 Maná |██████████████████  | 90% | 27/30 MP
+
+💥 ¡Héroe inflige 45 de daño especial a Goblin Feroz!
+   Goblin Feroz tiene 55/100 HP (55%)
+```
+
+
+
+## 👨‍💻 **Autor**
+
+**Tu Nombre Aquí**
+- GitHub: [@deamacevedo](https://github.com/deamacevedo)
+- GitHub: [@jefersonlopezr](https://github.com/jefersonlopezr)
+
+---
+
+## 🎉 **¡Disfruta el Juego!**
+
+¡Prepárate para batallas épicas y aventuras increíbles! ⚔️🎮
+
+*"En el mundo de la programación, como en los RPG, cada línea de código es una aventura esperando ser vivida."*
