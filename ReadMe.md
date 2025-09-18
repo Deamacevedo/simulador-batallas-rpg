@@ -148,7 +148,7 @@ src/
 
 ## 📊 **Diagrama de Clases UML**
 
-![Diagrama de Clases UML](diagramaUML/image.png)
+![Diagrama de Clases UML](./DiagramaUML/image.png)
 
 ---
 
